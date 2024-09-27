@@ -1,11 +1,28 @@
 /* src/components/HeroSection.css */
 .hero-section {
+  margin: 0px;
+  padding: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
+  /* max-width: 100%; */
   background: url("./bg.jpg") no-repeat center center/cover;
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed;
+  box-shadow: none;
+  /* padding: auto; 
+    -webkit-background-size: cover;left: 0%; */
+  /* background-size: cover; */
+  /* background-position: center center; */
 }
+/* img{
+  border: none;
+  
+  outline: none;
+} */
 
 .hero-content {
   text-align: center;
@@ -13,28 +30,51 @@
 }
 
 .ncb-logo {
-  width: 100px;
+  /* width: 100px; */
   margin-bottom: 20px;
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  width: 70px; /* Adjust the size of the logo */
+  height: auto;
+  margin: 10px;
+}
+
+.ncb-text {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 35px;
+  left: 120px;
+  color: rgb(143, 120, 21);
+  font-size: 1.5rem;
+  width: 70px;
 }
 
 .hero-title {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: yellow;
+  padding: 15px;
+  color: rgb(203, 203, 22);
 }
 
-p {
+.text-content {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: white;
 }
 
 .login-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  font-size: large;
+  position: absolute;
+  top: 45px;
+  width: 140px;
+  right: 45px;
+  background-color: #6aa6db;
+  color: black;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 25px;
   cursor: pointer;
 }
 
@@ -58,4 +98,29 @@ p {
 
 .crypto-icon:hover {
   transform: scale(1.2);
+}
+
+#Bitcoin {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 163px;
+  left: 70px;
+}
+#Dogecoin {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 163px;
+  right: 60px;
+}
+#Ethereum {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 400px;
+  left: 200px;
+}
+#polygon {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 400px;
+  right: 120px;
 }
