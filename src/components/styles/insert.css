@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.wallet-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wallet-form {
+  background-color: #142374;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.wallet-form h2 {
+  color: #9ec6fa;
+  margin-bottom: 10px;
+}
+
+.wallet-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  color: #455360;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+.wallet-id-input {
+  display: flex;
+  align-items: center;
+}
+
+.wallet-id-input input {
+  flex-grow: 1;
+}
+
+.eye-icon {
+  margin-left: 0px;
+  padding-bottom: 25px;
+  /* background-color: #ffffff; */
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.search-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4c70ff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #357abd;
+}

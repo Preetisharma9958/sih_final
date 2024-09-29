@@ -1,0 +1,47 @@
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.transaction-table th {
+  background-color: #034705;
+  color: white;
+}
+
+.transaction-table tr:hover {
+  background-color: rgb(53, 48, 48);
+}
+
+/* Conditional coloring for risk levels */
+.risk-high {
+  background-color: #ff4c4c; /* Red for high risk */
+  color: white;
+}
+.red-row {
+  background-color: red; /* Red background for rows */
+  color: white; /* Optional: change text color for better contrast */
+}
+
+button {
+  margin-top: 20px; /* Space above the button */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #202020; /* Background color */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+button:hover {
+  background-color: rgb(53, 48, 48); /* Change background on hover */
+}

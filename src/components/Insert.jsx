@@ -1,25 +1,39 @@
-import React from "react";
-import './insert.css'; // Import the corresponding CSS
+import React, { useState } from "react";
+import "./styles/insert.css"; // Importing the CSS
 
-function Insert() {
+function WalletForm() {
+  const [walletIdVisible, setWalletIdVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setWalletIdVisible(!walletIdVisible);
+  };
+
   return (
-    <div className="wallet-container">
-      <div className="wallet-box">
-        <form className="wallet-form">
-          <h2>Wallet Address</h2>
-          <input type="text" placeholder="Type your Wallet Address" />
+    <div className="wallet-form-container">
+      <div className="wallet-form">
+        <h2>Wallet Address</h2>
+        <input
+          type="text"
+          placeholder="Type your Wallet Address"
+          className="wallet-input"
+        />
 
-          <h2>Wallet Id</h2>
-          <div className="password-field">
-            <input type="password" placeholder="Type your wallet Id" />
-            <span className="eye-icon">&#128065;</span> {/* Eye icon for password */}
-          </div>
+        <h2>Wallet Id</h2>
+        <div className="wallet-id-input">
+          <input
+            type={walletIdVisible ? "text" : "password"}
+            placeholder="Type your wallet Id"
+            className="wallet-input"
+          />
+          <span onClick={toggleVisibility} className="eye-icon">
+            {walletIdVisible ? "👁️" : "🙈"}
+          </span>
+        </div>
 
-          <button type="submit" className="search-btn">SEARCH</button>
-        </form>
+        <button className="search-button">SEARCH</button>
       </div>
     </div>
   );
 }
 
-export default Insert;
+export default WalletForm;

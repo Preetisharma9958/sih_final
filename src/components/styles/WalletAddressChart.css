@@ -1,0 +1,57 @@
+/* Add this to your existing WalletAddressChart.css file */
+
+body {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.chart-container {
+  background-color: #111213;
+  height: 800px;
+  padding-top: 30px;
+}
+.wallet-table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  background-color: #111213;
+  font-size: 14px;
+}
+
+.wallet-table th,
+.wallet-table td {
+  padding: 10px;
+  border: 1px solid #ffe100e2;
+  color: #00ff00;
+  text-align: left;
+}
+
+.wallet-table th {
+  background-color: #111213;
+}
+
+.wallet-table .suspicious {
+  color: #ff0000;
+}
+
+.wallet-table .normal {
+  color: #00ff00;
+}
+
+.color-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.wallet-table td:nth-child(2) {
+  font-family: monospace;
+  background-color: #111213;
+  font-size: 12px;
+}
+
+.main-heading {
+  font-size: xx-large;
+  text-align: center;
+}

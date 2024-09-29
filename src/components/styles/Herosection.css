@@ -6,23 +6,7 @@
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  /* max-width: 100%; */
-  background: url("./bg.jpg") no-repeat center center/cover;
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed;
-  box-shadow: none;
-  /* padding: auto; 
-    -webkit-background-size: cover;left: 0%; */
-  /* background-size: cover; */
-  /* background-position: center center; */
 }
-/* img{
-  border: none;
-  
-  outline: none;
-} */
 
 .hero-content {
   text-align: center;
@@ -30,11 +14,10 @@
 }
 
 .ncb-logo {
-  /* width: 100px; */
   margin-bottom: 20px;
   position: absolute;
-  top: 35px;
-  left: 40px;
+  top: 10px;
+  left: 5px;
   width: 70px; /* Adjust the size of the logo */
   height: auto;
   margin: 10px;
@@ -43,18 +26,19 @@
 .ncb-text {
   margin-bottom: 20px;
   position: absolute;
-  top: 35px;
-  left: 120px;
-  color: rgb(143, 120, 21);
-  font-size: 1.5rem;
+  top: 32px;
+  left: 83px;
+  color: #b79d3e;
+  font-size: 1.7rem;
   width: 70px;
 }
 
 .hero-title {
+  position: inherit;
   font-size: 3rem;
   margin-bottom: 20px;
   padding: 15px;
-  color: rgb(203, 203, 22);
+  color: #fcea49;
 }
 
 .text-content {
@@ -63,22 +47,24 @@
   color: white;
 }
 
-.login-button {
-  font-size: large;
+.signup {
+  font-size: larger;
   position: absolute;
-  top: 45px;
-  width: 140px;
-  right: 45px;
-  background-color: #6aa6db;
+  top: 4%;
+  text-align: center;
+  max-height: 35px;
+  width: 115px;
+  right: 5%;
+  background-color: #90d6f4;
   color: black;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   margin: 10px;
   border-radius: 25px;
   cursor: pointer;
 }
 
-.login-button:hover {
+.signup:hover {
   background-color: #0056b3;
 }
 
@@ -102,25 +88,29 @@
 
 #Bitcoin {
   margin-bottom: 20px;
+  transform: rotate(-50deg);
   position: absolute;
-  top: 163px;
-  left: 70px;
+  top: 220px;
+  left: 280px;
 }
 #Dogecoin {
   margin-bottom: 20px;
+  transform: rotate(30deg);
   position: absolute;
-  top: 163px;
-  right: 60px;
+  top: 230px;
+  right: 300px;
 }
 #Ethereum {
   margin-bottom: 20px;
   position: absolute;
+  transform: rotate(17deg);
   top: 400px;
-  left: 200px;
+  left: 180px;
 }
 #polygon {
   margin-bottom: 20px;
   position: absolute;
   top: 400px;
-  right: 120px;
+  transform: rotate(125deg);
+  right: 200px;
 }

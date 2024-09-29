@@ -1,6 +1,6 @@
 // src/components/HeroSection.jsx
 import React from "react";
-import "./HeroSection.css"; // Import corresponding CSS
+import "./styles/Herosection.css"; // Import corresponding CSS
 
 const HeroSection = () => {
   return (
@@ -10,7 +10,7 @@ const HeroSection = () => {
           src="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Narcotics_Control_Bureau_Seal.svg/140px-Narcotics_Control_Bureau_Seal.svg.png"
           alt="NCB Logo"
           className="ncb-logo"
-        />{" "}
+        />
         <div className="ncb-text">
           <p>NCB</p>
         </div>
@@ -23,7 +23,7 @@ const HeroSection = () => {
           detecting <br /> suspicious wallets, and strengthening financial
           security.
         </p>
-        <button className="login-button">LOGIN</button>
+        <button className="signup">LOGIN</button>
         {/* Cryptocurrency Icons */}
         <div className="crypto-icons">
           <img
