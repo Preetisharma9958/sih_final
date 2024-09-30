@@ -3,7 +3,17 @@ import "./styles/TransactionTable.css"; // Optional: separate CSS for table
 
 const TransactionTable = ({ transactions, onDownload }) => {
   return (
-    <div>
+    <div
+      style={{
+        // width: "100%",
+        // height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        overflow: "hidden",
+      }}
+    >
       <table className="transaction-table">
         <thead>
           <tr>

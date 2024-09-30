@@ -87,89 +87,94 @@ const WalletAddressChart = () => {
   }, []);
 
   return (
-    <div className="page-container">
-      <h1 className="main-heading">Wallet Address Chart</h1>{" "}
-      {/* Centered Heading */}
-      <div className="chart-container">
-        <h2 className="graph-heading"></h2>
-        <ResponsiveContainer width="100%" height={400}>
-          <LineChart
-            data={data}
-            margin={{ top: 5, right: 30, left: 20, bottom: 18 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" stroke="#333" />
-            <XAxis
-              dataKey="time"
-              tickMargin={10}
-              tick={{ fill: "#00ff00" }}
-              label={{ value: "Time", position: "bottom", fill: "#00ff00" }}
-            />
-            <YAxis
-              tick={{ fill: "#00ff00" }}
-              axisLine={{ stroke: "#00ff00" }}
-              label={{
-                value: "Amount",
-                angle: -90,
-                position: "insideLeft",
-                fill: "#00ff00",
-              }}
-              domain={[200, 900]}
-            />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: "#000",
-                border: "1px solid #00ff00",
-                borderRadius: "0",
-              }}
-              labelStyle={{ color: "#00ff00" }}
-              itemStyle={{ color: "#00ff00" }}
-            />
-            {walletAddresses.map((address, index) => (
-              <Line
-                key={address}
-                type="monotone"
-                dataKey={`${address}.value`}
-                stroke={walletColors[index]}
-                dot={false}
-                strokeWidth={2}
-                name={`Wallet ${index + 1}`}
+    <div classname="chart">
+      <div className="page-container">
+        <div className="Heading">
+          <div className="main-heading">DASHBOARD</div> {/* Centered Heading */}
+        </div>
+        <div className="chart-container">
+          <h2 className="graph-heading"></h2>
+          <ResponsiveContainer width="100%" height={400} overflow="hidden">
+            <LineChart
+              data={data}
+              margin={{ top: 5, right: 30, left: 20, bottom: 18 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#333" />
+              <XAxis
+                dataKey="time"
+                tickMargin={10}
+                tick={{ fill: "white" }}
+                label={{ value: "Time", position: "bottom", fill: "white" }}
               />
-            ))}
-          </LineChart>
-        </ResponsiveContainer>
+              <YAxis
+                tick={{ fill: "white" }}
+                axisLine={{ stroke: "white" }}
+                label={{
+                  value: "Amount ($)",
+                  angle: -90,
+                  position: "insideLeft",
+                  fill: "white",
+                }}
+                domain={[200, 1000]}
+              />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#000",
+                  border: "1px solid #00ff00",
+                  borderRadius: "0",
+                }}
+                labelStyle={{ color: "#00ff00" }}
+                itemStyle={{ color: "#00ff00" }}
+              />
+              {walletAddresses.map((address, index) => (
+                <Line
+                  key={address}
+                  type="monotone"
+                  dataKey={`${address}.value`}
+                  stroke={walletColors[index]}
+                  dot={false}
+                  strokeWidth={2}
+                  name={`Wallet ${index + 1}`}
+                />
+              ))}
+            </LineChart>
+          </ResponsiveContainer>
 
-        <table className="wallet-table">
-          <thead>
-            <tr>
-              <th>Color</th>
-              <th>Wallet Address</th>
-              <th>Current Value</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {walletAddresses.map((address, index) => {
-              const latestData = data[data.length - 1][address];
-              return (
-                <tr key={address}>
-                  <td>
-                    <div
-                      className="color-indicator"
-                      style={{ backgroundColor: walletColors[index] }}
-                    />
-                  </td>
-                  <td>{address}</td>
-                  <td>{latestData.value.toFixed(2)}</td>
-                  <td
-                    className={latestData.suspicious ? "suspicious" : "normal"}
-                  >
-                    {latestData.suspicious ? "Suspicious" : "Normal"}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+          <table className="wallet-table">
+            <thead>
+              <tr>
+                <th>Color</th>
+                <th>Wallet Address</th>
+                <th>Current Value</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {walletAddresses.map((address, index) => {
+                const latestData = data[data.length - 1][address];
+                return (
+                  <tr key={address}>
+                    <td>
+                      <div
+                        className="color-indicator"
+                        style={{ backgroundColor: walletColors[index] }}
+                      />
+                    </td>
+                    <td>{address}</td>
+                    <td>{latestData.value.toFixed(2)}</td>
+                    <td
+                      className={
+                        latestData.suspicious ? "suspicious" : "normal"
+                      }
+                    >
+                      {latestData.suspicious ? "Suspicious" : "Normal"}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

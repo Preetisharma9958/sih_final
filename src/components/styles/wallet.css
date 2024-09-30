@@ -1,0 +1,20 @@
+.Wallet {
+  /* height: 100vh; */
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Wallet .search-button {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 100px;
+  align-self: end;
+  margin-right: 60px;
+}
+.Wallet .search-button:hover {
+  background-color: rgba(178, 138, 46, 0.776);
+  color: black;
+  cursor: pointer;
+}

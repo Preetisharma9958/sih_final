@@ -6,44 +6,51 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: url("bg.jpg") no-repeat center center fixed;
+  background: url("./bg1.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .wallet-form-container {
   display: flex;
-  justify-content: center;
+
+  /* justify-content: center; */
   align-items: center;
-  height: 100vh;
+  /* position: absolute; */
+  /* top: 140px; Adjust this value to move it upwards */
+  /* left: 240px; */
+  margin-left: 10vw;
+  height: 95vh;
 }
 
 .wallet-form {
-  background-color: #142374;
-  padding: 40px;
-  border-radius: 10px;
-  width: 400px;
+  background-color: #1e1e1e;
+  padding: 10vh 10vh;
+  border-radius: 50px;
+  /* width: 550px; */
+  /* height: 80vh; */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .wallet-form h2 {
-  color: #9ec6fa;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .wallet-input {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin-bottom: 20px;
   border: none;
-  color: #455360;
+  color: #101010;
   border-radius: 5px;
   background-color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .wallet-id-input {
   display: flex;
   align-items: center;
+  width: 90%;
 }
 
 .wallet-id-input input {
@@ -59,11 +66,11 @@ body {
 }
 
 .search-button {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #4c70ff;
+  background-color: #357abd;
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
@@ -71,5 +78,9 @@ body {
 }
 
 .search-button:hover {
-  background-color: #357abd;
+  background-color: #4c70ff;
+}
+.heading {
+  font-size: 30px;
+  padding: 0px 0px 15px 0px;
 }

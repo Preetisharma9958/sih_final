@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles/insert.css"; // Importing the CSS
+import { useNavigate } from "react-router-dom";
 
 function WalletForm() {
   const [walletIdVisible, setWalletIdVisible] = useState(false);
@@ -7,30 +8,38 @@ function WalletForm() {
   const toggleVisibility = () => {
     setWalletIdVisible(!walletIdVisible);
   };
+  const navigate = useNavigate(); // Initialize useNavigate
 
+  const handleSearchClick = () => {
+    navigate("/transactions"); // Navigate to WalletForm on click
+  };
   return (
-    <div className="wallet-form-container">
-      <div className="wallet-form">
-        <h2>Wallet Address</h2>
-        <input
-          type="text"
-          placeholder="Type your Wallet Address"
-          className="wallet-input"
-        />
-
-        <h2>Wallet Id</h2>
-        <div className="wallet-id-input">
+    <div className="insertion">
+      <div className="wallet-form-container">
+        <div className="wallet-form">
+          <div className="heading">
+            <h3>Please enter wallet address</h3>
+          </div>
+          <h2>Wallet Address</h2>
           <input
-            type={walletIdVisible ? "text" : "password"}
-            placeholder="Type your wallet Id"
+            type="text"
+            placeholder="Type your Wallet Address"
             className="wallet-input"
           />
-          <span onClick={toggleVisibility} className="eye-icon">
-            {walletIdVisible ? "👁️" : "🙈"}
-          </span>
-        </div>
 
-        <button className="search-button">SEARCH</button>
+          <h2>Password</h2>
+          <div className="wallet-id-input">
+            <input
+              type={walletIdVisible ? "text" : "password"}
+              placeholder="Type your password"
+              className="wallet-input"
+            />
+          </div>
+
+          <button className="search-button" onClick={handleSearchClick}>
+            SEARCH
+          </button>
+        </div>
       </div>
     </div>
   );

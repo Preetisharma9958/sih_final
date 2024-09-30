@@ -1,59 +1,47 @@
-// src/components/HeroSection.jsx
 import React from "react";
-import "./styles/Herosection.css"; // Import corresponding CSS
+import { useNavigate } from "react-router-dom";
+import "./styles/Herosection.css";
+import logo from "../assets/CipherTrack.png"; // Import the logo image
 
 const HeroSection = () => {
-  return (
-    <section className="hero-section">
-      <div className="hero-content">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Narcotics_Control_Bureau_Seal.svg/140px-Narcotics_Control_Bureau_Seal.svg.png"
-          alt="NCB Logo"
-          className="ncb-logo"
-        />
-        <div className="ncb-text">
-          <p>NCB</p>
-        </div>
-        <h1 className="hero-title">
-          Tracking Transactions, <br />
-          Securing the Future.
-        </h1>
-        <p className="text-content">
-          A blockchain model for tracing illegal cryptocurrency transactions,
-          detecting <br /> suspicious wallets, and strengthening financial
-          security.
-        </p>
-        <button className="signup">LOGIN</button>
-        {/* Cryptocurrency Icons */}
-        <div className="crypto-icons">
-          <img
-            id="Bitcoin"
-            src="./icons/bitcoin.png"
-            alt="Bitcoin"
-            className="crypto-icon"
-          />
-          <img
-            id="Ethereum"
-            src="./icons/ethereum.png"
-            alt="Ethereum"
-            className="crypto-icon"
-          />
-          <img
-            id="Dogecoin"
-            src="./icons/doge.png"
-            alt="Dogecoin"
-            className="crypto-icon"
-          />
+  const navigate = useNavigate();
 
-          <img
-            id="polygon"
-            src="./icons/polygon.png"
-            alt="Polygon"
-            className="crypto-icon"
-          />
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+  const handleAboutUsClick = () => {
+    navigate("/about-us");
+  };
+  return (
+    <div className="hero-container">
+      <header className="navbar">
+        <div className="logo">
+          {/* Include the logo image */}
+          <img src={logo} alt="CipherTrack Logo" className="logo-img" />
         </div>
+        <nav className="nav-links">
+          <button className="nav-button" onClick={handleAboutUsClick}>
+            ABOUT US
+          </button>
+          <button className="nav-button">BLOG</button>
+          <button className="nav-button-a">WORK WITH US</button>
+        </nav>
+      </header>
+      <div className="hero-content">
+        <h2>
+          Crypto Transaction <br />
+          Surveillance for Safe Endpoints
+        </h2>
+        <p>
+          A blockchain model for tracing illegal cryptocurrency transactions,
+          <br />
+          detecting suspicious wallets, and strengthening financial security.
+        </p>
+        <button className="signup" onClick={handleLoginClick}>
+          LOGIN
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
